@@ -16,6 +16,10 @@ A simple Python simulation of the classic "War" card game. Two players draw card
    ```bash
    git clone https://github.com/NicoleBreen/war.git
 
+2. Navigate to the project folder: cd war
+
+3. Run the game: python war.py
+
 ## Author
 
 Nicole Breen, 2024 <br>

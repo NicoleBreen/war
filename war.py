@@ -21,3 +21,33 @@ three_of_clubs = Card("Clubs","Three")
 # is the two of hearts the same value as three of clubs?
 result = two_hearts.value == three_of_clubs.value
 print(result) # False
+
+class Deck:
+
+    def __init__(self):
+        self.all_cards = []
+        for suit in suits:
+            for rank in ranks:
+                self.all_cards.append(Card(suit,rank))
+
+    def shuffle(self):
+        random.shuffle(self.all_cards)
+    # permanently removes one card
+    # can remove two or split etc
+    def deal_one(self):
+        return self.all_cards.pop()
+
+# test
+new_deck = Deck()
+first_card = new_deck.all_cards[0]
+last_card = new_deck.all_cards[-1]
+print(first_card)
+print(last_card)
+
+for card_object in new_deck.all_cards:
+    print(card_object)
+
+# shuffle creates a new deck
+new_deck.shuffle()
+for card_object in new_deck.all_cards:
+    print(card_object)
